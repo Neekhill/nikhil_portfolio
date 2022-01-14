@@ -1,5 +1,11 @@
+import Navbar from "./components/Navbar";
+
 function App() {
-  return <>hello wordl</>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
