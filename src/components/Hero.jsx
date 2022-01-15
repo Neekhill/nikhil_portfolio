@@ -43,19 +43,17 @@ const HeroBtn = styled.button`
   padding: 1rem 4rem;
   font-size: 20px;
   font-weight: 600;
+  border: none;
   background-color: black;
   color: #fff;
 `;
-const Hero = () => {
+const Hero = ({ title, desc, btnTitle }) => {
   return (
     <HeroContainer>
       <Wrapper>
-        <Title>HEY, I'M NIKHIL YADAV</Title>
-        <Desc>
-          A Software Engineer building Full Stack Websites and Web Applications
-          that leads to the success of the overall product
-        </Desc>
-        <HeroBtn>PROJECTS</HeroBtn>
+        <Title>{title}</Title>
+        <Desc>{desc}</Desc>
+        <HeroBtn>{btnTitle}</HeroBtn>
       </Wrapper>
     </HeroContainer>
   );
