@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
+import ProjectList from "./components/ProjectList";
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
         btnTitle="PROJECTS"
       />
       <AboutMe />
+      <ProjectList />
       <ContactMe />
       <Footer />
     </>

@@ -18,7 +18,7 @@ const Container = styled.div`
 const Left = styled.div`
   flex: 2;
   display: flex;
-  padding: 20px;
+  padding: 3rem;
   flex-direction: column;
 `;
 const Logo = styled.h2``;
@@ -60,7 +60,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>NIKHILL.</Logo>
+        <Logo>NIKHIL YADAV</Logo>
         <Desc>
           A <Bold>Software Engineer</Bold> building <Bold>Full Stack </Bold>
           Websites and Web Applications that leads to the success of the overall

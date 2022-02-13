@@ -44,7 +44,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Image src={nikhil}></Image>
-          <Logo>NIKHIL/YADAV</Logo>
+          <Logo>NIKHIL YADAV</Logo>
         </Left>
         <Right>
           <MenuItem>HOME</MenuItem>
