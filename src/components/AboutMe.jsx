@@ -92,7 +92,7 @@ const AboutMe = () => {
               A <Bold>Software Engineer</Bold> building <Bold>Full Stack </Bold>
               Websites and Web Applications that leads to the success of the
               overall product.Check out some of my work in the
-              <Bold>Projects</Bold> section.
+              <Bold> Projects</Bold> section.
             </LeftDesc>
             <LeftDesc>
               I can adapt into any technology rapidly making myself flexible
