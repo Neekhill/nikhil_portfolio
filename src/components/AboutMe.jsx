@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { tabletPlus } from "../responsive";
 
 const AboutMeConatiner = styled.div`
   margin-top: 5rem;
+  ${tabletPlus({ flexDirection: "column" })}
 `;
 const Wrapper = styled.div`
   padding: 0 20px;
@@ -16,7 +18,7 @@ const TopTitle = styled.h2`
   color: #3a3a3a;
 `;
 const TopDesc = styled.p`
-  font-size: 20px;
+  font-size: 24px;
   color: #555;
   max-width: 60rem;
   line-height: 1.5rem;
@@ -27,6 +29,7 @@ const TopDesc = styled.p`
 const Bottom = styled.div`
   display: flex;
   margin-top: 5rem;
+  ${tabletPlus({ flexDirection: "column" })}
 `;
 const Left = styled.div`
   flex: 1;

@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import styled from "styled-components";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -14,11 +15,13 @@ const Container = styled.div`
   padding: 30px 20px;
   background-color: black;
   color: white;
+  ${mobile({ flexDirection: "column" })}
+  ${tablet({ flexDirection: "column" })}
 `;
 const Left = styled.div`
   flex: 2;
   display: flex;
-  padding: 3rem;
+  padding: 2rem;
   flex-direction: column;
 `;
 const Logo = styled.h2``;
@@ -48,7 +51,7 @@ const Title = styled.h3`
 
 const Right = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 2rem;
 `;
 const ContactItem = styled.div`
   margin-bottom: 20px;

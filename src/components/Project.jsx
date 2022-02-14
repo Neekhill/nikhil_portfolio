@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-
+import { largeMobile, mobile, tablet, tabletPlus } from "../responsive";
 const ProjectContainer = styled.div`
   display: flex;
   margin: 2rem;
   padding: 1.5rem;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  ${tabletPlus({ flexDirection: "column", height: "55vh" })}
+  ${tablet({ padding: "10px", margin: "30px 0", height: "60vh" })}
+  ${largeMobile({ height: "70vh" })}
+  ${mobile({ height: "80vh" })}
 `;
 const ProjectLeft = styled.div`
   flex: 1;
@@ -16,6 +20,11 @@ const ProjectLeft = styled.div`
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
+  ${tabletPlus({
+    width: "90%",
+    height: "40vh",
+    overflow: "hidden",
+  })}
 `;
 const BrowserBar = styled.div`
   height: 30px;
@@ -43,18 +52,22 @@ const ProjectRight = styled.div`
   flex: 1;
   margin: 20px 10px;
   padding: 0 2rem;
+  ${tabletPlus({ padding: "10px", margin: "10px" })}
 `;
 const ProjectTitle = styled.div`
   font-size: 30px;
   font-weight: 600;
   padding-bottom: 2rem;
   color: #3a3a3a;
+  ${mobile({ fontSize: "20px", paddingBottom: "10px" })}
+  ${largeMobile({ fontSize: "25px", paddingBottom: "10px" })}
 `;
 const ProjectDesc = styled.div`
   font-size: 18px;
   color: #555;
   padding-bottom: 1rem;
   line-height: 1.5;
+  ${mobile({ fontSize: "16px", paddingBottom: "10px" })}
 `;
 const Bold = styled.b``;
 const ProjectButton = styled.button`
@@ -66,6 +79,7 @@ const ProjectButton = styled.button`
   border: none;
   margin-top: 50px;
   margin-right: 10px;
+  ${mobile({ padding: "4px 8px", fontSize: "16px", marginTop: "20px" })}
 `;
 
 const Project = ({ img, link }) => {
