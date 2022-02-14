@@ -2,7 +2,7 @@ import React from "react";
 import Project from "./Project";
 import { projects } from "../data";
 import styled from "styled-components";
-import { largeMobile, mobile, tabletPlus } from "../responsive";
+import { largeMobile, mobile } from "../responsive";
 const ProjectListContainer = styled.div`
   margin-top: 5rem;
   display: flex;
