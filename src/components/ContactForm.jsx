@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const FormConatiner = styled.div`
   padding: 35px;
@@ -53,6 +54,8 @@ const FormButton = styled.button`
   color: white;
   background-color: black;
   border: none;
+  cursor: pointer;
+  ${mobile({ padding: "0.5rem 1rem" })}
 `;
 
 const ContactForm = () => {

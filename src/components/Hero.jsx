@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { largeMobile, mobile, tabletPlus } from "../responsive";
 const change = keyframes`
     0%{
         background-position: 0% 50%;
@@ -29,17 +30,21 @@ const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  ${largeMobile({ padding: "0rem" })}
 `;
 const Title = styled.div`
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 2rem;
+  ${tabletPlus({ fontSize: "45px" })}
+  ${mobile({ fontSize: "30px" })}
 `;
 const Desc = styled.div`
   font-size: 20px;
   letter-spacing: 4px;
   margin-bottom: 3rem;
+  ${mobile({ fontSize: "16px" })}
 `;
 const HeroBtn = styled.button`
   padding: 1rem 4rem;
@@ -48,6 +53,8 @@ const HeroBtn = styled.button`
   border: none;
   background-color: black;
   color: #fff;
+  ${largeMobile({ padding: ".8rem 2.2rem" })}
+  ${mobile({ fontSize: "16px" })}
 `;
 const Hero = ({ title, desc, btnTitle }) => {
   return (

@@ -60,15 +60,15 @@ const ProjectTitle = styled.div`
   font-weight: 600;
   padding-bottom: 2rem;
   color: #3a3a3a;
-  ${mobile({ fontSize: "20px", paddingBottom: "10px" })}
   ${largeMobile({ fontSize: "25px", paddingBottom: "10px" })}
+  ${mobile({ fontSize: "18px", paddingBottom: "10px" })}
 `;
 const ProjectDesc = styled.div`
   font-size: 18px;
   color: #555;
   padding-bottom: 1rem;
   line-height: 1.5;
-  ${mobile({ fontSize: "16px", paddingBottom: "10px" })}
+  ${mobile({ fontSize: "14px", paddingBottom: "10px" })}
 `;
 const Bold = styled.b``;
 const ProjectButton = styled.button`

@@ -25,6 +25,7 @@ const PLTitle = styled.div`
   padding: 1rem 2rem;
   color: #3a3a3a;
   ${largeMobile({ fontSize: "30px" })}
+  ${mobile({ fontSize: "22px" })}
 `;
 const PLDesc = styled.div`
   font-size: 24px;
@@ -34,6 +35,7 @@ const PLDesc = styled.div`
   text-align: center;
   margin: 0 auto;
   ${largeMobile({ fontSize: "20px" })}
+  ${mobile({ fontSize: "16px" })}
 `;
 const PLBottom = styled.div`
   margin-top: 5rem;

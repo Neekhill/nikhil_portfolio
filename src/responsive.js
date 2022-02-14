@@ -17,7 +17,7 @@ const largeMobile = (props) => {
 
 const tablet = (props) => {
   return css`
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 821px) {
       ${props}
     }
   `;

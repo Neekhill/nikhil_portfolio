@@ -15,8 +15,8 @@ const Container = styled.div`
   padding: 30px 20px;
   background-color: black;
   color: white;
-  ${mobile({ flexDirection: "column" })}
   ${tablet({ flexDirection: "column" })}
+  ${mobile({ flexDirection: "column", padding: "20px 5px" })}
 `;
 const Left = styled.div`
   flex: 2;

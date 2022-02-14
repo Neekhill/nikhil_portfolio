@@ -17,6 +17,7 @@ const TopTitle = styled.h2`
   padding: 1rem 2rem;
   color: #3a3a3a;
   ${largeMobile({ fontSize: "30px" })}
+  ${mobile({ fontSize: "22px" })}
 `;
 const TopDesc = styled.p`
   font-size: 24px;
@@ -25,6 +26,7 @@ const TopDesc = styled.p`
   line-height: 1.5rem;
   text-align: center;
   ${largeMobile({ fontSize: "20px" })}
+  ${mobile({ fontSize: "16px" })}
 
   margin: 0 auto;
 `;
@@ -43,6 +45,7 @@ const LeftTitle = styled.h3`
   font-weight: 600;
   padding: 2rem 0;
   color: #3a3a3a;
+  ${mobile({ fontSize: "20px" })}
 `;
 const LeftDesc = styled.p`
   font-size: 20px;
@@ -50,6 +53,7 @@ const LeftDesc = styled.p`
   padding-bottom: 1rem;
   line-height: 1.5;
   ${largeMobile({ fontSize: "20px", paddingBottom: "10px" })}
+  ${mobile({ fontSize: "16px" })}
 `;
 const Bold = styled.b``;
 const LeftButton = styled.button`
@@ -60,7 +64,7 @@ const LeftButton = styled.button`
   color: #fff;
   border: none;
   margin-top: 2rem;
-  ${largeMobile({ padding: "0.5rem 1.5rem", fontSize: "16" })}
+  ${largeMobile({ padding: "0.5rem 1.5rem", fontSize: "16px" })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -74,6 +78,7 @@ const RightTitle = styled.div`
   margin-left: 1rem;
   color: #3a3a3a;
   ${tabletPlus({ marginLeft: "0rem" })}
+  ${mobile({ fontSize: "20px" })}
 `;
 const RightSkillsContainer = styled.div`
   display: flex;
@@ -85,6 +90,7 @@ const Skill = styled.div`
   background-color: #ededed;
   ${tabletPlus({ marginLeft: "0.4rem" })}
   ${largeMobile({ padding: "0.5rem 1.5rem" })}
+  ${mobile({ fontSize: "14px" })}
 `;
 const AboutMe = () => {
   return (
