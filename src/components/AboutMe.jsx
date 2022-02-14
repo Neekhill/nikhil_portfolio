@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { tabletPlus } from "../responsive";
+import { largeMobile, mobile, tabletPlus } from "../responsive";
 
 const AboutMeConatiner = styled.div`
   margin-top: 5rem;
@@ -16,6 +16,7 @@ const TopTitle = styled.h2`
   text-align: center;
   padding: 1rem 2rem;
   color: #3a3a3a;
+  ${largeMobile({ fontSize: "30px" })}
 `;
 const TopDesc = styled.p`
   font-size: 24px;
@@ -23,6 +24,7 @@ const TopDesc = styled.p`
   max-width: 60rem;
   line-height: 1.5rem;
   text-align: center;
+  ${largeMobile({ fontSize: "20px" })}
 
   margin: 0 auto;
 `;
@@ -34,6 +36,7 @@ const Bottom = styled.div`
 const Left = styled.div`
   flex: 1;
   padding: 3rem;
+  ${largeMobile({ padding: "1rem" })}
 `;
 const LeftTitle = styled.h3`
   font-size: 30px;
@@ -46,6 +49,7 @@ const LeftDesc = styled.p`
   color: #555;
   padding-bottom: 1rem;
   line-height: 1.5;
+  ${largeMobile({ fontSize: "20px", paddingBottom: "10px" })}
 `;
 const Bold = styled.b``;
 const LeftButton = styled.button`
@@ -56,10 +60,12 @@ const LeftButton = styled.button`
   color: #fff;
   border: none;
   margin-top: 2rem;
+  ${largeMobile({ padding: "0.5rem 1.5rem", fontSize: "16" })}
 `;
 const Right = styled.div`
   flex: 1;
   margin: 3rem;
+  ${largeMobile({ margin: "1rem" })}
 `;
 const RightTitle = styled.div`
   font-size: 30px;
@@ -67,6 +73,7 @@ const RightTitle = styled.div`
   padding: 2rem 0;
   margin-left: 1rem;
   color: #3a3a3a;
+  ${tabletPlus({ marginLeft: "0rem" })}
 `;
 const RightSkillsContainer = styled.div`
   display: flex;
@@ -76,6 +83,8 @@ const Skill = styled.div`
   padding: 1rem 2rem;
   margin: 1rem;
   background-color: #ededed;
+  ${tabletPlus({ marginLeft: "0.4rem" })}
+  ${largeMobile({ padding: "0.5rem 1.5rem" })}
 `;
 const AboutMe = () => {
   return (

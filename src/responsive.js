@@ -9,7 +9,7 @@ const mobile = (props) => {
 };
 const largeMobile = (props) => {
   return css`
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 560px) {
       ${props}
     }
   `;

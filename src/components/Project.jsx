@@ -4,25 +4,26 @@ import { largeMobile, mobile, tablet, tabletPlus } from "../responsive";
 const ProjectContainer = styled.div`
   display: flex;
   margin: 2rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
+
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   ${tabletPlus({ flexDirection: "column", height: "55vh" })}
-  ${tablet({ padding: "10px", margin: "30px 0", height: "60vh" })}
-  ${largeMobile({ height: "70vh" })}
+  ${tablet({ padding: "10px", margin: "30px 0", height: "70vh" })}
+  ${largeMobile({ height: "85vh" })}
   ${mobile({ height: "80vh" })}
 `;
 const ProjectLeft = styled.div`
   flex: 1;
   width: 50%;
-  height: 50vh;
+  height: 40vh;
   margin: 20px 10px;
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
   ${tabletPlus({
-    width: "90%",
-    height: "40vh",
+    width: "93%",
+    height: "50vh",
     overflow: "hidden",
   })}
 `;
