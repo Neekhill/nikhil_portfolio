@@ -66,7 +66,7 @@ const ContactForm = () => {
   const [done, setDone] = useState(false);
 
   const notify = () =>
-    toast.success("Message sent successfully!", { position: "top-right" });
+    toast.success("Message sent successfully!", { position: "bottom-center" });
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -98,7 +98,7 @@ const ContactForm = () => {
             <FormInput
               type="text"
               placeholder="Enter Your Name"
-              name="name"
+              name="user_name"
             ></FormInput>
           </FormLabel>
           <FormLabel for="subject">
@@ -106,7 +106,7 @@ const ContactForm = () => {
             <FormInput
               type="text"
               placeholder="Subject"
-              name="subject"
+              name="user_subject"
             ></FormInput>
           </FormLabel>
           <FormLabel for="email">
@@ -114,13 +114,13 @@ const ContactForm = () => {
             <FormInput
               type="email"
               placeholder="Enter Your Email"
-              name="email"
+              name="user_email"
             ></FormInput>
           </FormLabel>
           <FormLabel for="message">
             <FormText>Message</FormText>
             <FormTextArea
-              type=""
+              type="text"
               placeholder="Your Message!"
               name="message"
             ></FormTextArea>
