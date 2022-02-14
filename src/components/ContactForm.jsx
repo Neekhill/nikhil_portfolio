@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FormConatiner = styled.div`
   padding: 35px;
@@ -48,8 +51,8 @@ const FormTextArea = styled.textarea`
   border-bottom: 2px solid #cbcbcb;
 `;
 const FormButton = styled.button`
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem 1.5rem;
   color: white;
   background-color: black;
@@ -59,25 +62,74 @@ const FormButton = styled.button`
 `;
 
 const ContactForm = () => {
+  const formRef = useRef();
+  const [done, setDone] = useState(false);
+
+  const notify = () =>
+    toast.success("Message sent successfully!", { position: "top-right" });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_4e71bwg",
+        "template_kxxuybn",
+        formRef.current,
+        "user_mOb3Eegv22yLaRMkRAZzE"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setDone(true);
+          done && notify();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    formRef.current.reset();
+  };
   return (
-    <FormConatiner>
-      <Title>Say Hello!</Title>
-      <Form>
-        <FormLabel for="name">
-          <FormText>Name</FormText>
-          <FormInput type="text" placeholder="Enter Your Name"></FormInput>
-        </FormLabel>
-        <FormLabel for="email">
-          <FormText>Email</FormText>
-          <FormInput type="email" placeholder="Enter Your Email"></FormInput>
-        </FormLabel>
-        <FormLabel for="message">
-          <FormText>Message</FormText>
-          <FormTextArea type="" placeholder="Your Message!"></FormTextArea>
-        </FormLabel>
-        <FormButton>Submit</FormButton>
-      </Form>
-    </FormConatiner>
+    <>
+      <FormConatiner>
+        <Title>Say Hello!</Title>
+        <Form ref={formRef} onSubmit={handleSubmit}>
+          <FormLabel for="name">
+            <FormText>Name</FormText>
+            <FormInput
+              type="text"
+              placeholder="Enter Your Name"
+              name="name"
+            ></FormInput>
+          </FormLabel>
+          <FormLabel for="subject">
+            <FormText>Subject</FormText>
+            <FormInput
+              type="text"
+              placeholder="Subject"
+              name="subject"
+            ></FormInput>
+          </FormLabel>
+          <FormLabel for="email">
+            <FormText>Email</FormText>
+            <FormInput
+              type="email"
+              placeholder="Enter Your Email"
+              name="email"
+            ></FormInput>
+          </FormLabel>
+          <FormLabel for="message">
+            <FormText>Message</FormText>
+            <FormTextArea
+              type=""
+              placeholder="Your Message!"
+              name="message"
+            ></FormTextArea>
+          </FormLabel>
+          <FormButton>Submit</FormButton>
+        </Form>
+        <ToastContainer />
+      </FormConatiner>
+    </>
   );
 };
 
