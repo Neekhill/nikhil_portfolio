@@ -3,6 +3,7 @@ import nikhil from "../assets/nikhil.jpeg";
 import { largeMobile, mobile, tablet } from "../responsive";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Container = styled.div`
   height: 60px;
@@ -50,7 +51,10 @@ const MenuItem = styled.div`
 
 const ContainerSmall = styled.div`
   padding: 10px;
-
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
   display: none;
   ${tablet({ display: "block" })}
 `;
@@ -74,7 +78,6 @@ const DDMenuItem = styled.div`
   cursor: pointer;
   color: balck;
 `;
-
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -90,10 +93,37 @@ const Navbar = () => {
             <Logo>NIKHIL YADAV</Logo>
           </Left>
           <Right>
-            <MenuItem>HOME</MenuItem>
-            <MenuItem>ABOUT</MenuItem>
-            <MenuItem>PROJECTS</MenuItem>
-            <MenuItem>CONTACT</MenuItem>
+            <Link
+              to="#home"
+              smooth
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>HOME</MenuItem>
+            </Link>
+
+            <Link
+              to="#about"
+              smooth
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>ABOUT</MenuItem>
+            </Link>
+
+            <Link
+              to="#projects"
+              smooth
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>PROJECTS</MenuItem>
+            </Link>
+
+            <Link
+              to="#contact"
+              smooth
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <MenuItem>CONTACT</MenuItem>
+            </Link>
           </Right>
         </Wrapper>
       </Container>
@@ -112,10 +142,34 @@ const Navbar = () => {
           </MainMenu>
           {showMenu && (
             <DropDownMenu>
-              <DDMenuItem>HOME</DDMenuItem>
-              <DDMenuItem>ABOUT</DDMenuItem>
-              <DDMenuItem>PROJECTS</DDMenuItem>
-              <DDMenuItem>CONTACT</DDMenuItem>
+              <Link
+                to="#home"
+                smooth
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <DDMenuItem>HOME</DDMenuItem>
+              </Link>
+              <Link
+                to="#about"
+                smooth
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <DDMenuItem>ABOUT</DDMenuItem>
+              </Link>
+              <Link
+                to="#projects"
+                smooth
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <DDMenuItem>PROJECTS</DDMenuItem>
+              </Link>
+              <Link
+                to="#contact"
+                smooth
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <DDMenuItem>CONTACT</DDMenuItem>
+              </Link>
             </DropDownMenu>
           )}
         </WrapperSmall>

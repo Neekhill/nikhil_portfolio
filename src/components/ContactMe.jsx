@@ -21,11 +21,12 @@ const ContactMeConatiner = styled.div`
   background-size: 400% 400%;
   animation: ${change} 10s ease-in-out infinite;
   position: relative;
+  scroll-margin-top: 3.5em;
   clip-path: polygon(0 5vw, 100% 0, 100% calc(100%), 0 100%);
 `;
 const ContactMe = () => {
   return (
-    <ContactMeConatiner>
+    <ContactMeConatiner id="contact">
       <ContactForm />
     </ContactMeConatiner>
   );

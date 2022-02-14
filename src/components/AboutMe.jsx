@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { HashLink as Link } from "react-router-hash-link";
 import { largeMobile, mobile, tabletPlus } from "../responsive";
 
 const AboutMeConatiner = styled.div`
   margin-top: 5rem;
   ${tabletPlus({ flexDirection: "column" })}
+  scroll-margin-top: 3.5em;
 `;
 const Wrapper = styled.div`
   padding: 0 20px;
@@ -64,6 +66,7 @@ const LeftButton = styled.button`
   color: #fff;
   border: none;
   margin-top: 2rem;
+  cursor: pointer;
   ${largeMobile({ padding: "0.5rem 1.5rem", fontSize: "16px" })}
 `;
 const Right = styled.div`
@@ -94,7 +97,7 @@ const Skill = styled.div`
 `;
 const AboutMe = () => {
   return (
-    <AboutMeConatiner>
+    <AboutMeConatiner id="about">
       <Wrapper>
         <Top>
           <TopTitle>ABOUT ME</TopTitle>
@@ -124,7 +127,9 @@ const AboutMe = () => {
               <Bold>contact me</Bold>.
             </LeftDesc>
 
-            <LeftButton>CONTACT</LeftButton>
+            <Link to="#contact" smooth>
+              <LeftButton>CONTACT</LeftButton>
+            </Link>
           </Left>
           <Right>
             <RightTitle>My Skills</RightTitle>

@@ -9,6 +9,7 @@ const ProjectListContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 3.5em;
 `;
 const PLTop = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ const PLBottom = styled.div`
 
 const ProjectList = () => {
   return (
-    <ProjectListContainer>
+    <ProjectListContainer id="projects">
       <PLTop>
         <PLTitle>PROJECTS</PLTitle>
         <PLDesc>

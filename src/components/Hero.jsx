@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import styled, { keyframes } from "styled-components";
 import { largeMobile, mobile, tabletPlus } from "../responsive";
 const change = keyframes`
@@ -21,6 +22,7 @@ const HeroContainer = styled.div`
   background-size: 400% 400%;
   animation: ${change} 10s ease-in-out infinite;
   position: relative;
+  scroll-margin-top: 3.5em;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
 `;
 const Wrapper = styled.div`
@@ -53,16 +55,19 @@ const HeroBtn = styled.button`
   border: none;
   background-color: black;
   color: #fff;
+  cursor: pointer;
   ${largeMobile({ padding: ".8rem 2.2rem" })}
   ${mobile({ fontSize: "16px" })}
 `;
 const Hero = ({ title, desc, btnTitle }) => {
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <Wrapper>
         <Title>{title}</Title>
         <Desc>{desc}</Desc>
-        <HeroBtn>{btnTitle}</HeroBtn>
+        <Link to="#projects" smooth>
+          <HeroBtn>{btnTitle}</HeroBtn>
+        </Link>
       </Wrapper>
     </HeroContainer>
   );
