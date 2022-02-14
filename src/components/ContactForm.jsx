@@ -80,7 +80,6 @@ const ContactForm = () => {
         (result) => {
           console.log(result.text);
           setDone(true);
-          done && notify();
         },
         (error) => {
           console.log(error.text);
@@ -116,6 +115,7 @@ const ContactForm = () => {
               placeholder="Enter Your Email"
               name="user_email"
             ></FormInput>
+            <ToastContainer />
           </FormLabel>
           <FormLabel for="message">
             <FormText>Message</FormText>
@@ -125,9 +125,8 @@ const ContactForm = () => {
               name="message"
             ></FormTextArea>
           </FormLabel>
-          <FormButton>Submit</FormButton>
+          <FormButton onClick={() => notify()}>Submit</FormButton>
         </Form>
-        <ToastContainer />
       </FormConatiner>
     </>
   );

@@ -92,7 +92,7 @@ const Skill = styled.div`
   margin: 1rem;
   background-color: #ededed;
   ${tabletPlus({ marginLeft: "0.4rem" })}
-  ${largeMobile({ padding: "0.5rem 1.5rem" })}
+  ${largeMobile({ padding: "0.5rem .8rem", margin: ".5rem" })}
   ${mobile({ fontSize: "14px" })}
 `;
 const AboutMe = () => {
