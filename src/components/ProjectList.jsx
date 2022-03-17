@@ -56,7 +56,13 @@ const ProjectList = () => {
       </PLTop>
       <PLBottom>
         {projects.map((item) => (
-          <Project key={item.id} img={item.img} link={item.link} />
+          <Project
+            key={item.id}
+            img={item.img}
+            link={item.link}
+            frontend={item.frontend}
+            backend={item.backend}
+          />
         ))}
       </PLBottom>
     </ProjectListContainer>

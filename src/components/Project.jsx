@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { largeMobile, mobile, tablet, tabletPlus } from "../responsive";
 const ProjectContainer = styled.div`
@@ -83,7 +84,7 @@ const ProjectButton = styled.button`
   ${mobile({ padding: "4px 8px", fontSize: "16px", marginTop: "20px" })}
 `;
 
-const Project = ({ img, link }) => {
+const Project = ({ img, link, frontend, backend }) => {
   return (
     <ProjectContainer>
       <ProjectLeft>
@@ -103,8 +104,17 @@ const Project = ({ img, link }) => {
           and utilized nodejs and mongoDB for backend
         </ProjectDesc>
 
-        <ProjectButton>Live Link</ProjectButton>
-        <ProjectButton>Source Code</ProjectButton>
+        <Link to={link}>
+          <ProjectButton>Live Link</ProjectButton>
+        </Link>
+        <Link to={frontend}>
+          <ProjectButton>UI Code</ProjectButton>
+        </Link>
+        {backend && (
+          <Link to={backend}>
+            <ProjectButton> backend Code</ProjectButton>
+          </Link>
+        )}
       </ProjectRight>
     </ProjectContainer>
   );
