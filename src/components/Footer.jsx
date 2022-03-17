@@ -94,7 +94,7 @@ const Footer = () => {
         </ContactItem>
         <ContactItem>
           <MailOutlined style={{ marginRight: "10px" }} />{" "}
-          nikhilyadav331@gmail.com
+          iamnikhilyadav27@gmail.com
         </ContactItem>
       </Right>
     </Container>

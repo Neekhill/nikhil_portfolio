@@ -2,6 +2,8 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import styled, { keyframes } from "styled-components";
 import { largeMobile, mobile, tabletPlus } from "../responsive";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { GitHub, Instagram, MailOutlined } from "@mui/icons-material";
 const change = keyframes`
     0%{
         background-position: 0% 50%;
@@ -59,6 +61,24 @@ const HeroBtn = styled.button`
   ${largeMobile({ padding: ".8rem 2.2rem" })}
   ${mobile({ fontSize: "16px" })}
 `;
+
+const SocialContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+`;
+const SocialIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #${(props) => props.color};
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+`;
 const Hero = ({ title, desc, btnTitle }) => {
   return (
     <HeroContainer id="home">
@@ -68,6 +88,31 @@ const Hero = ({ title, desc, btnTitle }) => {
         <Link to="#projects" smooth>
           <HeroBtn>{btnTitle}</HeroBtn>
         </Link>
+        <SocialContainer>
+          <a href="https://github.com/Neekhill" target="_blank">
+            <SocialIcon color="545353">
+              <GitHub />
+            </SocialIcon>
+          </a>
+
+          <SocialIcon color="E4405f">
+            <Instagram />
+          </SocialIcon>
+
+          <a
+            href="https://www.linkedin.com/in/nikhil-yadav-b5a459208/"
+            target="_blank"
+          >
+            <SocialIcon color="0077b5">
+              <LinkedInIcon />
+            </SocialIcon>
+          </a>
+          <Link to="#contact" smooth>
+            <SocialIcon color="747171">
+              <MailOutlined />
+            </SocialIcon>
+          </Link>
+        </SocialContainer>
       </Wrapper>
     </HeroContainer>
   );

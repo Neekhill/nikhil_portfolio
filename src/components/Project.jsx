@@ -11,13 +11,13 @@ const ProjectContainer = styled.div`
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   ${tabletPlus({ flexDirection: "column", height: "55vh" })}
   ${tablet({ padding: "10px", margin: "30px 0", height: "70vh" })}
-  ${largeMobile({ height: "85vh" })}
-  ${mobile({ height: "80vh" })}
+  ${largeMobile({ height: "90vh" })}
+  ${mobile({ height: "90vh" })}
 `;
 const ProjectLeft = styled.div`
   flex: 1;
   width: 50%;
-  height: 40vh;
+  height: 45vh;
   margin: 20px 10px;
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
@@ -77,6 +77,7 @@ const ProjectButton = styled.button`
   font-size: 18px;
   font-weight: 600;
   background-color: black;
+  cursor: pointer;
   color: #fff;
   border: none;
   margin-top: 50px;
@@ -84,7 +85,7 @@ const ProjectButton = styled.button`
   ${mobile({ padding: "4px 8px", fontSize: "16px", marginTop: "20px" })}
 `;
 
-const Project = ({ img, link, frontend, backend }) => {
+const Project = ({ img, title, desc, link, frontend, backend }) => {
   return (
     <ProjectContainer>
       <ProjectLeft>
@@ -96,24 +97,21 @@ const Project = ({ img, link, frontend, backend }) => {
         <ProjectImage src={img}></ProjectImage>
       </ProjectLeft>
       <ProjectRight>
-        <ProjectTitle>NIKHILL.</ProjectTitle>
-        <ProjectDesc>
-          Developed an eCommerce application using <Bold>MERN</Bold> stack that
-          allows users to buy apparels. Integrated <Bold>RazorPay API</Bold> for
-          payments. Incorporated <Bold>Redux Toolkit</Bold> for state management
-          and utilized nodejs and mongoDB for backend
-        </ProjectDesc>
+        <a href={link} target="_blank" style={{ textDecoration: "none" }}>
+          <ProjectTitle>{title}</ProjectTitle>
+        </a>
+        <ProjectDesc>{desc}</ProjectDesc>
 
-        <Link to={link}>
+        <a href={link} target="_blank">
           <ProjectButton>Live Link</ProjectButton>
-        </Link>
-        <Link to={frontend}>
+        </a>
+        <a href={frontend} target="_blank">
           <ProjectButton>UI Code</ProjectButton>
-        </Link>
+        </a>
         {backend && (
-          <Link to={backend}>
+          <a href={backend} target="_blank">
             <ProjectButton> backend Code</ProjectButton>
-          </Link>
+          </a>
         )}
       </ProjectRight>
     </ProjectContainer>
