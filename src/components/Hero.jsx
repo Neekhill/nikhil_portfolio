@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import styled, { keyframes } from "styled-components";
 import { largeMobile, mobile, tabletPlus } from "../responsive";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { GitHub, Instagram, MailOutlined } from "@mui/icons-material";
+import { GitHub, Height, Instagram, MailOutlined } from "@mui/icons-material";
 const change = keyframes`
     0%{
         background-position: 0% 50%;
@@ -67,6 +67,7 @@ const SocialContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  margin-left: 20px;
 `;
 const SocialIcon = styled.div`
   width: 40px;
@@ -78,6 +79,8 @@ const SocialIcon = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  ${largeMobile({ width: "35px ", height: "35px" })}
+  ${mobile({ width: "35px ", height: "35px" })}
 `;
 const Hero = ({ title, desc, btnTitle }) => {
   return (

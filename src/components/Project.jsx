@@ -6,9 +6,13 @@ const ProjectContainer = styled.div`
   display: flex;
   margin: 2rem;
   padding: 1.5rem 0rem 1.5rem 1.5rem;
-
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  & > ProjectLeft > ProjectImage {
+    &:hover {
+      transform: translateY(-50%);
+    }
+  }
   ${tabletPlus({ flexDirection: "column", height: "55vh" })}
   ${tablet({ padding: "10px", margin: "30px 0", height: "70vh" })}
   ${largeMobile({ height: "90vh" })}
@@ -46,9 +50,7 @@ const BrowserCircle = styled.div`
 const ProjectImage = styled.img`
   width: 100%;
   transition: all 10s ease;
-  &:hover {
-    transform: translateY(-50%);
-  }
+  cursor: pointer;
 `;
 const ProjectRight = styled.div`
   flex: 1;
@@ -94,7 +96,7 @@ const Project = ({ img, title, desc, link, frontend, backend }) => {
           <BrowserCircle></BrowserCircle>
           <BrowserCircle></BrowserCircle>
         </BrowserBar>
-        <ProjectImage src={img}></ProjectImage>
+        <ProjectImage src={img} className="#projectImage"></ProjectImage>
       </ProjectLeft>
       <ProjectRight>
         <a href={link} target="_blank" style={{ textDecoration: "none" }}>
