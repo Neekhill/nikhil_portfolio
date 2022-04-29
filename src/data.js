@@ -32,7 +32,7 @@ export const projects = [
     title: "Nik.Admin",
     desc: "It is the admin dashboard template that help you create amazing web projects. Using React technology it is designed to make getting started quick and easy. Utilized Styled-components and material UI for design. Integrated React-router-dom for routing",
     img: "https://i.ibb.co/9yYTF8H/dashboard-SS.png",
-    link: "https://peaceful-heisenberg-b3fab0.netlify.app",
+    link: "https://nikadmin.netlify.app/",
     frontend: "https://github.com/Neekhill/reactAdminDashboar",
     backend: "",
   },
