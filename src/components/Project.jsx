@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { largeMobile, mobile, tablet, tabletPlus } from "../responsive";
 const ProjectContainer = styled.div`
@@ -50,7 +50,9 @@ const BrowserCircle = styled.div`
 const ProjectImage = styled.img`
   width: 100%;
   transition: all 10s ease;
-  cursor: pointer;
+  &:hover {
+    transform: translateY(-50%);
+  }
 `;
 const ProjectRight = styled.div`
   flex: 1;
@@ -73,7 +75,7 @@ const ProjectDesc = styled.div`
   line-height: 1.5;
   ${mobile({ fontSize: "14px", paddingBottom: "10px" })}
 `;
-const Bold = styled.b``;
+
 const ProjectButton = styled.button`
   padding: 8px 16px;
   font-size: 18px;
